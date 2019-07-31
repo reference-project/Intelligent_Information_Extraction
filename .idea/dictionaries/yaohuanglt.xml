@@ -1,10 +1,15 @@
 <component name="ProjectDictionaryState">
   <dictionary name="yaohuanglt">
     <words>
+      <w>cbow</w>
+      <w>cuda</w>
       <w>datagrand</w>
       <w>dataloader</w>
+      <w>lstm</w>
+      <w>openai</w>
       <w>predata</w>
       <w>skipgram</w>
+      <w>wordbag</w>
     </words>
   </dictionary>
 </component>
