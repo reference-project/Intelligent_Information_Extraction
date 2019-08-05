@@ -3,13 +3,11 @@
 train_data_path = 'D:\\Data\\datagrand\\train.txt'
 test_data_path = 'D:\\Data\\datagrand\\test.txt'
 """
-
-
-labels = {'o': '0', 'a': '1', 'b': '2', 'c': '3'}
+from config import DefaultConfig
 
 
 # 对训练集进行处理得到训练过程需要的新格式的数据集
-def train_process(path):
+def train_process(path, tag):
     train_data = open(path + 'train_data.txt', 'w')
     train_label = open(path + 'train_label.txt', 'w')
     with open(path + 'train.txt', 'r') as train:
@@ -20,7 +18,7 @@ def train_process(path):
                 for word in words.split('_'):
                     train_data.write(word)
                     train_data.write('\t')
-                    train_label.write(labels[flag])
+                    train_label.write(tag[flag])
                     train_label.write('\t')
             train_data.write('\n')
             train_label.write('\n')
@@ -41,5 +39,6 @@ def test_process(path):
 
 
 if __name__ == '__main__':
-    train_process('D:\\Data\\datagrand\\')
+    opt = DefaultConfig()
+    train_process('D:\\Data\\datagrand\\', opt.tag_to_ix)
     test_process('D:\\Data\\datagrand\\')

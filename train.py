@@ -22,6 +22,7 @@ from data_pre_analysis.pre_data_modify import data_process_for_word2vec_skipgram
 
 # 首先导入基本参数
 opt = DefaultConfig()
+torch.manual_seed(opt.seed)
 
 # 预训练数据处理保存和加载
 # 首先判断是否需要对原始数据进行处理，或是直接加载处理后的新预训练数据

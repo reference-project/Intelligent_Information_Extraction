@@ -1,6 +1,7 @@
 <component name="ProjectDictionaryState">
   <dictionary name="yaohuanglt">
     <words>
+      <w>argmax</w>
       <w>cbow</w>
       <w>cuda</w>
       <w>datagrand</w>
@@ -8,7 +9,9 @@
       <w>lstm</w>
       <w>openai</w>
       <w>predata</w>
+      <w>pytorch</w>
       <w>skipgram</w>
+      <w>tagset</w>
       <w>wordbag</w>
     </words>
   </dictionary>

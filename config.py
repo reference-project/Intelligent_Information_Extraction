@@ -6,18 +6,22 @@ import warnings
 
 class DefaultConfig:
     # 训练基本信息
+    seed = 2019  # 参数初始化时的随机种子
     use_gpu = False  # 是否使用GPU训练模型
     learning_rate = 0.001  # 学习率
     epoch = 20  # 训练总次数
     pre_mode = "word2vec"  # 预训练类型，包括word2vec、glove、elmo、openai和bert
 
     # 数据基本信息
-    word_num = 21225
-    data_path = 'D:\\Data\\datagrand\\'
+    word_num = 21225  # 字符出现数量
+    data_path = 'D:\\Data\\datagrand\\'  # 所有文件的路径
+    tag_to_ix = {'o': '0', 'a': '1', 'b': '2', 'c': '3'}
+    ix_to_tag = {'0': 'o', '1': 'a', '2': 'b', 'c': '3'}
 
     # word embedding阶段需要的超参数
     is_pre_process = False
     is_pre_train = False
+    embedding_dim = 256  # 词向量维度
     embedding_epoch = 20  # 预训练阶段epoch数量
     embedding_size = 128  # 单词对应embedding向量的长度
     embedding_batch = 64  # 预训练阶段的batch
